@@ -1,21 +1,9 @@
-# Use an official Python base image
-FROM python:3.10-slim
+FROM python:3.8-slim-buster
 
-# # Set environment variables
-# ENV PYTHONDONTWRITEBYTECODE=1
-# ENV PYTHONUNBUFFERED=1
-
-# Set the working directory
+RUN apt update -y && apt install awscli -y
 WORKDIR /app
 
-# Copy the application files
 COPY . /app
+RUN pip install -r requirements.txt
 
-# Install dependencies
-RUN pip install --no-cache-dir -r requirements.txt
-
-# Expose the port Flask runs on
-EXPOSE 5000
-
-# Run the application
-CMD ["python", "app.py"]
+CMD ["python3", "app.py"]
