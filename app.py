@@ -1,6 +1,7 @@
 from flask import Flask, request, render_template_string
 
 app = Flask(__name__)
+print("simpme app is working")
 
 HTML_TEMPLATE = '''
 <!doctype html>
