@@ -5,11 +5,11 @@ app = Flask(__name__)
 HTML_TEMPLATE = '''
 <!doctype html>
 <title>Multiply Two Numbers</title>
-<h2>Add Two Numbers</h2>
+<h2>Multiply Two Numbers</h2>
 <form method="POST" action="/">
   Number 1: <input type="number" name="num1" required><br><br>
   Number 2: <input type="number" name="num2" required><br><br>
-  <input type="submit" value="Add">
+  <input type="submit" value="Multiply">
 </form>
 {% if result is not none %}
   <h3>Result: {{ result }}</h3>
