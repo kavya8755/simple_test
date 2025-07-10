@@ -4,8 +4,8 @@ app = Flask(__name__)
 
 HTML_TEMPLATE = '''
 <!doctype html>
-<title>Multiply Two Numbers</title>
-<h2>Multiply Two Numbers</h2>
+<title>Multiply Two Numbers New</title>
+<h2>Multiply Two Numbers with user interface</h2>
 <form method="POST" action="/">
   Number 1: <input type="number" name="num1" required><br><br>
   Number 2: <input type="number" name="num2" required><br><br>
