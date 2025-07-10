@@ -1,11 +1,10 @@
 from flask import Flask, request, render_template_string
 
 app = Flask(__name__)
-print("simpme app is working")
 
 HTML_TEMPLATE = '''
 <!doctype html>
-<title>Add Two Numbers</title>
+<title>Multiply Two Numbers</title>
 <h2>Add Two Numbers</h2>
 <form method="POST" action="/">
   Number 1: <input type="number" name="num1" required><br><br>
@@ -24,7 +23,7 @@ def add():
         try:
             num1 = float(request.form['num1'])
             num2 = float(request.form['num2'])
-            result = num1 + num2
+            result = num1 * num2
         except Exception as e:
             result = f"Error: {str(e)}"
     return render_template_string(HTML_TEMPLATE, result=result)
